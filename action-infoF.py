@@ -38,8 +38,7 @@ class infoFAPS(object):
         # action code goes here...
         intentname = intent_message.intent.intent_name
         if intentname == "atesfa:info":
-            hermes.publish_end_session(intent_message.session_id, "Faps steht für den Lehrstuhl für Fertigungsautomatisierung und Produktionssystematik. Der Lehrstuhl wird von Herrn Professor Franke geleitet und hat Standorte in Erlangen und Nürnberg. Hier am Lehrstuhl gibt es sechs verschiedene Forschungsbereiche. Die Elektronikproduktion, den Elektromaschinenbau, die Bordnetze, Effiziente Systeme, die Hausautomatisierung und natürlich meinen Lieblingsbereich die Biomechatronik. Das ist nämlich der Bereich in dem auch ich erforscht werde.")
-
+            hermes.publish_end_session(intent_message.session_id, "Info")
     # --> Register callback function and start MQTT
     def start_blocking(self):
         with Hermes(MQTT_ADDR) as h:
